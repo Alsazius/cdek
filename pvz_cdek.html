@@ -2,35 +2,26 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Выбор ПВЗ СДЭК</title>
+    <title>Тест СДЭК</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@cdek-it/widget@3" charset="utf-8"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 10px;
-            background: #f9f9f9;
-        }
-        h3 {
-            margin-top: 0;
-        }
-        #cdek-map {
+        #map {
             width: 100%;
             height: 600px;
-            border: none;
         }
-    </style> 
+    </style>
 </head>
 <body>
     <h3>📍 Выберите пункт выдачи СДЭК</h3>
-    <div id="cdek-map"></div>
+    <div id="map"></div>
 
-    <script type="text/javascript">
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             new window.CDEKWidget({
                 from: 'Москва',
-                root: 'cdek-map',
-                apiKey: '5d049b60-9678-4958-a553-525b2b70934e', // ← Заменить на свой
-                servicePath: 'https://alsazius.github.io/cdek/service.php', // ← Указать путь к service.php
+                root: 'map',
+                apiKey: '5d049b60-9678-4958-a553-525b2b70934e',
+                servicePath: 'https://alsazius.github.io/cdek/service.php',
                 defaultLocation: 'Москва'
             });
         });
